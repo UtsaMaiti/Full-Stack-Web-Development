@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Events</title>
+  <link rel="stylesheet" href="JavaScript_Events1.css">
+</head>
+<body>
+  <div class="section">
+    <h2><b><u>Mouse Event</u></b></h2>
+    <div id="mousebox" class="box" onclick="singleClick()" ondblclick="doubleClick()">Click Here!
+    </div>
+    <p id="Mouse_Event">Hover and Click here</p>
+  </div>
+  <div class="section">
+    <h2><b><u>Keyboard Event</u></b></h2>
+    <input type="text" id="InputKeyboard" onkeydown="handleKeyDown()"
+            onkeyup="handleKeyUp()" onkeypress="handleKeyPress()" placeholder=" ">
+        <p id="Keyboard_Event">Type here!</p>
+  </div>
+  <div class="section">
+    <h2>Form Events</h2>
+    <form id="demoForm" onsubmit="handleSubmit(event)">
+      <label for="name-input">Name:</label>
+      <input type="text" id="name-input"><br><br>
+      <label for="email-input">Email:</label>
+      <input type="email" id="email-input"><br><br>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="formEventResult">Form data will be displayed here.</p>
+  </div>
+  <div class="section">
+    <h2><b><u>Drag Event</u></b></h2>
+    <div class="container">
+      <div id="dragBox" draggable="true" ondragstart="dragStart(event)">Drag me</div>
+      <div id="dropBox" ondragover="allowDrop(event)" ondrop="drop(event)">Drop here</div>
+  </div>
+        <p id="Drag_Event" align="center">Drag the box and drop here !</p>
+  </div>
+  <div class="container">
+    <video id="videoPlayer" width="600" controls>
+      <source src="Video 1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="controls">
+      <button id="playButton">Play</button>
+      <br>
+      <button id="pauseButton">Pause</button>
+      <br>
+      <button id="resetButton">Reset</button>
+      <br>
+    </div>
+  </div>
+  <br>
+  <br>
+  <img src="5.jpg" alt="Your Image" onclick="toggleBlur()">
+  <br>
+  <br>
+  <audio controls>
+        <source src="Audio 1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+  <script src="JavaScript_Events1.js">
+  </script>
+</body>
+</html>
